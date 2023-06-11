@@ -33,11 +33,8 @@ export default async function Store() {
     <main>
       <div className="xl:m-20 rounded-md grid xs:grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-8">
         {products.map((product) => (
-          <Card>
-            <div
-              className="bg-white p-8 xs:col-span-6 sm:col-span-4 md:col-span-2 xl:col-span-1"
-              key={product.id}
-            >
+          <Card key={product.id}>
+            <div className="bg-white p-8 xs:col-span-6 sm:col-span-4 md:col-span-2 xl:col-span-1">
               <h1>${product.price}</h1>
               <div className="aspect-video relative">
                 <Image
