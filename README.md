@@ -4,9 +4,40 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ![youtube](https://www.youtube.com/watch?v=7MKEOfSP2s4)
 
-## UI
+## UI - Shadcn, Lucide React, Tailwind-CSS
 
-Uses ![shadcn](https://ui.shadcn.com/docs)
+### Shadcn
+
+- Shadcn is not a npm package as of now.
+- It's a collection of re-usable components that you can copy and paste into your apps.
+- The creator wants us to have ownership of the code, so only need to copy the component we need.
+- Uses ![shadcn](https://ui.shadcn.com/docs) - Re-usable components built using Radix UI and Tailwind CSS
+- Follow the manual installation guide ![here](https://ui.shadcn.com/docs/installation) to add to your project
+
+## CLI to Add Components
+
+To add a shadcn component, simply run:
+
+```bash
+npx shadcn-ui add <component_name>
+npx shadcn-ui add skeleton
+```
+
+This will auto add the **<component_name>.tsx** file under **components\ui** directory.
+Then just import and use the component:
+
+```javascript
+import { Skeleton } from "@/components/ui/skeleton";
+<Skeleton className="w-[100px] h-[20px] rounded-full" />;
+```
+
+### Lucide React
+
+- an open-source icon library that provides 1000+ vector (svg) files for displaying icons and symbols
+- Lucide contains icons with different variants and states
+- Lucide uses SVG compression and specific code architecture for tree-shaking abilities.
+- After tree-shaking, you only ship the icons you used, which helps to keep software distribution size to a minimum.
+- See ![Documentation](https://lucide.dev/guide/)
 
 ## Getting Started
 
@@ -14,10 +45,6 @@ First, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
