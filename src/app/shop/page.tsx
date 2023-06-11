@@ -12,7 +12,7 @@ const getGames = async (): Promise<Game[]> => {
     `https://api.rawg.io/api/games?key=${process.env.RAWG_API}`
   );
   if (!res.ok) {
-    throw new Error("Failed to fetch");
+    throw new Error("Failed to fetch data");
   }
   // await new Promise((resolve) => setTimeout(resolve, 2000));
   const data = await res.json();

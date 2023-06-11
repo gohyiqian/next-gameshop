@@ -87,6 +87,11 @@ export default function LoginPage() {
           <Link href="/admin">Admin</Link>
         </Button>
       </div>
+      <div className="flex m-auto pt-6">
+        <Button className="w-[400px]">
+          <Link href="/store">Go Store</Link>
+        </Button>
+      </div>
     </div>
   );
 }
